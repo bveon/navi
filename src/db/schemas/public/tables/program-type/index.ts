@@ -1,13 +1,11 @@
-import { integer, pgTable, text } from 'drizzle-orm/pg-core';
+import { pgTable, text, varchar } from 'drizzle-orm/pg-core';
 
 const programType = pgTable(
   'program_type',
   /* eslint-disable perfectionist/sort-objects */
   {
-    id: integer().primaryKey(),
-    programType: text().notNull(),
-    duration: integer().notNull(),
-    courseOffset: integer().notNull(),
+    code: varchar({ length: 3 }).primaryKey(),
+    abbreviation: text().notNull(),
   },
   /* eslint-enable perfectionist/sort-objects */
 ).enableRLS();

@@ -1,25 +1,24 @@
 import { stringToNumber } from '../../../../utils/coercion';
 import { Seed } from '../../../../utils/seed';
 
-import { programScholarship as t } from '.';
+import { degreeProgram as t } from '.';
 
-class ProgramScholarshipSeed extends Seed<typeof t, typeof t.$inferSelect> {
+class DegreeProgramSeed extends Seed<typeof t, typeof t.$inferSelect> {
   protected async transform(
     row: Record<keyof typeof t.$inferSelect, string>,
   ): Promise<typeof t.$inferSelect> {
     return new Promise((resolve) => {
       resolve({
         ...row,
-        capacityFlg: stringToNumber(row.capacityFlg),
+        degreeId: stringToNumber(row.degreeId),
         deleteFlg: stringToNumber(row.deleteFlg),
         id: stringToNumber(row.id),
         programId: stringToNumber(row.programId),
-        scholarshipId: stringToNumber(row.scholarshipId),
       });
     });
   }
 }
 
-const programScholarship = new ProgramScholarshipSeed(t);
+const degreeProgram = new DegreeProgramSeed(t);
 
-export { programScholarship };
+export { degreeProgram };

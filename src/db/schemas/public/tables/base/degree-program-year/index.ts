@@ -1,22 +1,22 @@
-import { integer, pgTable, unique } from 'drizzle-orm/pg-core';
+import { integer, pgTable, unique, varchar } from 'drizzle-orm/pg-core';
 
 import { degree } from '../../degree';
 import { programType } from '../../program-type';
 
-const programCourseYearBase = pgTable(
-  'program_course_year_base',
+const degreeProgramYearBase = pgTable(
+  'degree_program_year_base',
   /* eslint-disable perfectionist/sort-objects */
   {
     id: integer().primaryKey(),
     degreeId: integer()
       .notNull()
       .references(() => degree.id),
-    programTypeId: integer()
+    programTypeCode: varchar({ length: 3 })
       .notNull()
-      .references(() => programType.id),
+      .references(() => programType.code),
   },
   /* eslint-enable perfectionist/sort-objects */
-  (table) => [unique().on(table.degreeId, table.programTypeId)],
+  (table) => [unique().on(table.degreeId, table.programTypeCode)],
 ).enableRLS();
 
-export { programCourseYearBase };
+export { degreeProgramYearBase };

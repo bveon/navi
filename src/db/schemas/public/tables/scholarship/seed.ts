@@ -14,6 +14,8 @@ class ScholarshipSeed extends Seed<typeof t, typeof t.$inferSelect> {
       resolve({
         ...row,
         deleteFlg: stringToNumber(row.deleteFlg),
+        displayEnd: stringToStringOrNull(row.displayEnd),
+        displayStart: stringToStringOrNull(row.displayStart),
         id: stringToNumber(row.id),
         scholarship: stringToNumber(row.scholarship),
         scholarshipKsp: stringToStringOrNull(row.scholarshipKsp),

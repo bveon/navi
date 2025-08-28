@@ -4,13 +4,13 @@ const designation = pgTable(
   'designation',
   /* eslint-disable perfectionist/sort-objects */
   {
+    deleteFlg: integer().notNull(),
     id: integer().primaryKey(),
     name: text().notNull(),
     japaneseName: text().notNull(),
     iconUrl: text().notNull(),
     description: text().notNull(),
     aCode: text().notNull().unique(),
-    deleteFlg: integer().notNull(),
   },
   /* eslint-enable perfectionist/sort-objects */
 ).enableRLS();

@@ -15,6 +15,7 @@ const degree = pgTable(
   'degree',
   /* eslint-disable perfectionist/sort-objects */
   {
+    deleteFlg: integer().notNull(),
     id: integer().primaryKey(),
     universityId: integer()
       .notNull()
@@ -26,10 +27,10 @@ const degree = pgTable(
       .notNull()
       .references(() => major.id),
     concentration: text(),
-    honors: boolean().notNull(),
+    hons: boolean().notNull(),
     durationUg: integer().notNull(),
     durationPg: integer().notNull(),
-    cricosCode: text(),
+    cricos: text(),
     intakes: text().notNull(),
     startDate: date({ mode: 'string' }).notNull(),
     endDate: date({ mode: 'string' }),
@@ -43,7 +44,7 @@ const degree = pgTable(
       table.awardId,
       table.majorId,
       table.concentration,
-      table.honors,
+      table.hons,
     ),
   ],
 ).enableRLS();

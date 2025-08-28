@@ -1,4 +1,4 @@
-import { stringToNumber } from '../../../../utils/coercion';
+import { stringToBoolean, stringToNumber } from '../../../../utils/coercion';
 import { Seed } from '../../../../utils/seed';
 
 import { ranking as t } from '.';
@@ -11,6 +11,7 @@ class RankingSeed extends Seed<typeof t, typeof t.$inferSelect> {
       resolve({
         ...row,
         deleteFlg: stringToNumber(row.deleteFlg),
+        displayFlg: stringToBoolean(row.displayFlg),
         id: stringToNumber(row.id),
         universityId: stringToNumber(row.universityId),
         year: stringToNumber(row.year),

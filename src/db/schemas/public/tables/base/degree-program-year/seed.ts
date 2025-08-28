@@ -1,9 +1,9 @@
 import { stringToNumber } from '../../../../../utils/coercion';
 import { Seed } from '../../../../../utils/seed';
 
-import { programCourseYearBase as t } from '.';
+import { degreeProgramYearBase as t } from '.';
 
-class ProgramCourseYearNaviSeed extends Seed<typeof t, typeof t.$inferSelect> {
+class DegreeProgramYearBaseSeed extends Seed<typeof t, typeof t.$inferSelect> {
   protected async transform(
     row: Record<keyof typeof t.$inferSelect, string>,
   ): Promise<typeof t.$inferSelect> {
@@ -12,12 +12,11 @@ class ProgramCourseYearNaviSeed extends Seed<typeof t, typeof t.$inferSelect> {
         ...row,
         degreeId: stringToNumber(row.degreeId),
         id: stringToNumber(row.id),
-        programTypeId: stringToNumber(row.programTypeId),
       });
     });
   }
 }
 
-const programCourseYearNavi = new ProgramCourseYearNaviSeed(t);
+const degreeProgramYearBase = new DegreeProgramYearBaseSeed(t);
 
-export { programCourseYearNavi };
+export { degreeProgramYearBase };

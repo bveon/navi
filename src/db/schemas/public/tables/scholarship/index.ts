@@ -4,6 +4,7 @@ const scholarship = pgTable(
   'scholarship',
   /* eslint-disable perfectionist/sort-objects */
   {
+    deleteFlg: integer().notNull(),
     id: integer().primaryKey(),
     name: text().notNull(),
     scholarship: integer().notNull(),
@@ -12,7 +13,6 @@ const scholarship = pgTable(
     scholarshipType: text().notNull(),
     displayStart: date({ mode: 'string' }),
     displayEnd: date({ mode: 'string' }),
-    deleteFlg: integer().notNull(),
   },
   /* eslint-enable perfectionist/sort-objects */
 ).enableRLS();

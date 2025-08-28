@@ -13,9 +13,7 @@ const config = {
   insertPragma: false,
   jsxSingleQuote: true,
   objectWrap: 'preserve',
-  plugins: [
-    require.resolve('prettier-plugin-packagejson'),
-  ],
+  plugins: [require.resolve('prettier-plugin-packagejson')],
   printWidth: 80,
   proseWrap: 'preserve',
   quoteProps: 'as-needed',

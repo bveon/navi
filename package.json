@@ -13,11 +13,10 @@
     "db:down": "docker-compose down",
     "db:drop": "DB_DROP=true tsx scripts/drop-db.ts",
     "db:generate": "drizzle-kit generate",
-    "db:migrate": "DB_MIGRATE=true tsx scripts/migrate-db.ts && pnpm run db:push",
-    "db:push": "DB_PUSH=true tsx scripts/push-db.ts",
+    "db:migrate": "DB_MIGRATE=true tsx scripts/migrate-db.ts",
     "db:rollback": "drizzle-kit drop",
     "db:seed": "DB_SEED=true tsx scripts/seed-db.ts",
-    "db:sync": "drizzle-kit push && pnpm run db:push",
+    "db:sync": "drizzle-kit push",
     "db:up": "docker-compose up --detach",
     "format": "prettier . --write --log-level warn --cache --cache-location 'node_modules/.cache/prettier'",
     "lint": "eslint . --cache --cache-location 'node_modules/.cache/eslint' --max-warnings 0"

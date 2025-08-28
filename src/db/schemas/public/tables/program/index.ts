@@ -9,36 +9,37 @@ import {
   text,
 } from 'drizzle-orm/pg-core';
 
-import { programType } from '../program-type';
+import { programTypeInstance } from '../program-type-instance';
 
 const program = pgTable(
   'program',
   /* eslint-disable perfectionist/sort-objects */
   {
+    deleteFlg: integer().notNull(),
     id: integer().primaryKey(),
     name: text().notNull(),
-    programType: integer()
+    programTypeInstanceId: integer()
       .notNull()
-      .references(() => programType.id),
+      .references(() => programTypeInstance.id),
     kspEn: text().notNull(),
     ksp: text().notNull(),
     scholarshipKspEn: text(),
     scholarshipKsp: text(),
     provider: text().notNull(),
-    cricosCode: text(),
+    cricos: text(),
     startDate: date({ mode: 'string' }).notNull(),
     endDate: date({ mode: 'string' }),
     tuition: integer().notNull(),
     ielts: numeric({ precision: 2, scale: 1 }),
-    ieltsReading: numeric({ precision: 2, scale: 1 }),
-    ieltsWriting: numeric({ precision: 2, scale: 1 }),
-    ieltsListening: numeric({ precision: 2, scale: 1 }),
-    ieltsSpeaking: numeric({ precision: 2, scale: 1 }),
+    ieltsR: numeric({ precision: 2, scale: 1 }),
+    ieltsW: numeric({ precision: 2, scale: 1 }),
+    ieltsL: numeric({ precision: 2, scale: 1 }),
+    ieltsS: numeric({ precision: 2, scale: 1 }),
     toefl: integer(),
-    toeflReading: integer(),
-    toeflWriting: integer(),
-    toeflListening: integer(),
-    toeflSpeaking: integer(),
+    toeflR: integer(),
+    toeflW: integer(),
+    toeflL: integer(),
+    toeflS: integer(),
     gpa: numeric({ precision: 5, scale: 2 }).notNull(),
     gpaSub: text(),
     gpaSubJpn: text(),
@@ -60,7 +61,6 @@ const program = pgTable(
     otherRequirement: boolean().notNull(),
     eatFlg: boolean().notNull(),
     capacityFlg: boolean().notNull(),
-    deleteFlg: integer().notNull(),
   },
   /* eslint-enable perfectionist/sort-objects */
   (table) => [
@@ -68,20 +68,20 @@ const program = pgTable(
       'check_ielts_score',
       sql`
         (${table.ielts} IS NULL OR (${table.ielts} BETWEEN 0 AND 9 AND ${table.ielts} % 0.5 = 0)) AND
-        (${table.ieltsReading} IS NULL OR (${table.ieltsReading} BETWEEN 0 AND 9 AND ${table.ieltsReading} % 0.5 = 0)) AND
-        (${table.ieltsListening} IS NULL OR (${table.ieltsListening} BETWEEN 0 AND 9 AND ${table.ieltsListening} % 0.5 = 0)) AND
-        (${table.ieltsWriting} IS NULL OR (${table.ieltsWriting} BETWEEN 0 AND 9 AND ${table.ieltsWriting} % 0.5 = 0)) AND
-        (${table.ieltsSpeaking} IS NULL OR (${table.ieltsSpeaking} BETWEEN 0 AND 9 AND ${table.ieltsSpeaking} % 0.5 = 0))
+        (${table.ieltsR} IS NULL OR (${table.ieltsR} BETWEEN 0 AND 9 AND ${table.ieltsR} % 0.5 = 0)) AND
+        (${table.ieltsL} IS NULL OR (${table.ieltsL} BETWEEN 0 AND 9 AND ${table.ieltsL} % 0.5 = 0)) AND
+        (${table.ieltsW} IS NULL OR (${table.ieltsW} BETWEEN 0 AND 9 AND ${table.ieltsW} % 0.5 = 0)) AND
+        (${table.ieltsS} IS NULL OR (${table.ieltsS} BETWEEN 0 AND 9 AND ${table.ieltsS} % 0.5 = 0))
         `,
     ),
     check(
       'check_toefl_score',
       sql`
         (${table.toefl} IS NULL OR ${table.toefl} BETWEEN 0 AND 120) AND
-        (${table.toeflReading} IS NULL OR ${table.toeflReading} BETWEEN 0 AND 30) AND
-        (${table.toeflListening} IS NULL OR ${table.toeflListening} BETWEEN 0 AND 30) AND
-        (${table.toeflWriting} IS NULL OR ${table.toeflWriting} BETWEEN 0 AND 30) AND
-        (${table.toeflSpeaking} IS NULL OR ${table.toeflSpeaking} BETWEEN 0 AND 30)
+        (${table.toeflR} IS NULL OR ${table.toeflR} BETWEEN 0 AND 30) AND
+        (${table.toeflL} IS NULL OR ${table.toeflL} BETWEEN 0 AND 30) AND
+        (${table.toeflW} IS NULL OR ${table.toeflW} BETWEEN 0 AND 30) AND
+        (${table.toeflS} IS NULL OR ${table.toeflS} BETWEEN 0 AND 30)
         `,
     ),
     check(

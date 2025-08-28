@@ -12,7 +12,6 @@ const envSchema = z.object({
   DB_MIGRATE: stringBoolean.default('false'),
   DB_PASSWORD: z.string().min(1),
   DB_PORT: z.coerce.number().min(1),
-  DB_PUSH: stringBoolean.default('false'),
   DB_SEED: stringBoolean.default('false'),
   DB_USER: z.string().min(1),
   NODE_ENV: z.string().default('development'),

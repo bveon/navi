@@ -4,7 +4,7 @@ import { disciplineTag } from '../discipline-tag';
 import { major } from '../major';
 
 const majorDisciplineTag = pgTable(
-  'major_study_subarea',
+  'major_discipline_tag',
   /* eslint-disable perfectionist/sort-objects */
   {
     majorId: integer()

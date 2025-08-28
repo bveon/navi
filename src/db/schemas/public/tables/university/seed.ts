@@ -1,6 +1,7 @@
 import {
   stringToNumber,
   stringToNumberOrNull,
+  stringToStringOrNull,
 } from '../../../../utils/coercion';
 import { Seed } from '../../../../utils/seed';
 
@@ -14,11 +15,15 @@ class UniversitySeed extends Seed<typeof t, typeof t.$inferSelect> {
       resolve({
         ...row,
         deleteFlg: stringToNumber(row.deleteFlg),
-        foundingYear: stringToNumber(row.foundingYear),
+        endDate: stringToStringOrNull(row.endDate),
+        foundationYear: stringToNumber(row.foundationYear),
         id: stringToNumber(row.id),
         imgVersion: stringToNumber(row.imgVersion),
         internationalStudents: stringToNumber(row.internationalStudents),
         mainUniversityId: stringToNumber(row.mainUniversityId),
+        nonApplicableNationalCode: stringToStringOrNull(
+          row.nonApplicableNationalCode,
+        ),
         score: stringToNumber(row.score),
         students: stringToNumber(row.students),
         uapplyId: stringToNumberOrNull(row.uapplyId),

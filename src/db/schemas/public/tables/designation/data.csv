@@ -1,5 +1,5 @@
-﻿id,tid_name,tid_description
-1,1,5
-2,2,6
-3,3,7
-4,4,8
+﻿delete_flg,id,name,japanese_name,icon_url,description,a_code
+0,20001,Russel Group,ラッセルグループ,https://upaa.jp/images/designation/russelgroup.png,ラッセル・グループ は、 オックスフォード大学やケンブリッジ大学などイギリスの名門大学で構成された団体名。英国版アイビーリーグとも呼ばれる,russelgroup
+0,20002,Group of 8,グループ８,https://upaa.jp/images/designation/go8.png,グループ8は、オーストラリアの主要な8大学で構成された名門大学群の総称。オーストラリア版アイビーリーグとも呼ばれる,go8
+0,20003,US Top 250,アメリカトップ２５０,https://upaa.jp/images/designation/usnews.png,アメリカ人学生が大学出願の際に参考にする大学ランキング。卒業率、1クラスの学生数、教授と学生の比率、教授の博士号取得率などさまざまな角度から分析されている,usnews
+0,20004,U15,Ｕ１５,https://upaa.jp/images/designation/u15.png,U15は、カナダのトップクラスの15大学で構成された主要研究型大学の団体名,u15

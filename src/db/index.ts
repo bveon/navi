@@ -12,9 +12,7 @@ const db = drizzleClient({
     database: env.DB_DATABASE,
     host: env.DB_HOST,
     max:
-      env.DB_DROP || env.DB_MIGRATE || env.DB_PUSH || env.DB_SEED ?
-        1
-      : env.DB_MAX_CONNECTIONS,
+      env.DB_DROP || env.DB_MIGRATE || env.DB_SEED ? 1 : env.DB_MAX_CONNECTIONS,
     password: env.DB_PASSWORD,
     port: env.DB_PORT,
     user: env.DB_USER,

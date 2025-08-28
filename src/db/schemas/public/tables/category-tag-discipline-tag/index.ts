@@ -8,6 +8,7 @@ const categoryTagDisciplineTag = pgTable(
   'category_tag_discipline_tag',
   /* eslint-disable perfectionist/sort-objects */
   {
+    deleteFlg: integer().notNull(),
     id: integer().primaryKey(),
     categoryTagId: integer()
       .notNull()
@@ -16,7 +17,6 @@ const categoryTagDisciplineTag = pgTable(
       .notNull()
       .references(() => disciplineTag.id),
     sort: integer().notNull(),
-    deleteFlg: integer().notNull(),
   },
   /* eslint-enable perfectionist/sort-objects */
   (table) => [

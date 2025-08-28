@@ -7,6 +7,7 @@ const universityDesignation = pgTable(
   'university_designation',
   /* eslint-disable perfectionist/sort-objects */
   {
+    deleteFlg: integer().notNull(),
     id: integer().primaryKey(),
     universityId: integer()
       .notNull()
@@ -14,7 +15,6 @@ const universityDesignation = pgTable(
     designationId: integer()
       .notNull()
       .references(() => designation.id),
-    deleteFlg: integer().notNull(),
   },
   /* eslint-enable perfectionist/sort-objects */
   (table) => [unique().on(table.universityId, table.designationId)],

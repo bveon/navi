@@ -1,12 +1,10 @@
-﻿iso3166_code,tid_name,tid_description
-au,3,
-ca,4,
-de,7,
-gb,1,
-ie,6,
-jp,10,
-my,9,
-nl,8,
-nz,5,
-us,2,
-vn,11,
+﻿delete_flg,code,name,japanese_name,tuition_currency,sort
+0,gb,United Kingdom,イギリス,gbp,1
+0,us,United States of America,アメリカ,usd,2
+0,au,Australia,オーストラリア,aud,3
+0,my,Malaysia,マレーシア,myr,4
+0,nz,New Zealand,ニュージーランド,nzd,5
+0,ca,Canada,カナダ,cad,6
+0,ie,Ireland,アイルランド,eur,7
+0,nl,Netherlands,オランダ,eur,8
+0,de,Germany,ドイツ,eur,9

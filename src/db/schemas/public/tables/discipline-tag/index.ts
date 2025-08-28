@@ -4,10 +4,10 @@ const disciplineTag = pgTable(
   'discipline_tag',
   /* eslint-disable perfectionist/sort-objects */
   {
+    deleteFlg: integer().notNull(),
     id: integer().primaryKey(),
     name: text().notNull(),
     japaneseName: text().notNull(),
-    deleteFlg: integer().notNull(),
   },
   /* eslint-enable perfectionist/sort-objects */
 ).enableRLS();

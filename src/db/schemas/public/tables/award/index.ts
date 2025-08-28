@@ -4,11 +4,11 @@ const award = pgTable(
   'award',
   /* eslint-disable perfectionist/sort-objects */
   {
+    deleteFlg: integer().notNull(),
     id: integer().primaryKey(),
-    name: text().notNull().unique(),
     award: text().notNull(),
     ksp: text().notNull(),
-    deleteFlg: integer().notNull(),
+    aLongName: text().notNull().unique(),
   },
   /* eslint-enable perfectionist/sort-objects */
 ).enableRLS();

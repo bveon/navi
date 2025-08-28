@@ -7,6 +7,7 @@ const programScholarship = pgTable(
   'program_scholarship',
   /* eslint-disable perfectionist/sort-objects */
   {
+    deleteFlg: integer().notNull(),
     id: integer().primaryKey(),
     programId: integer()
       .notNull()
@@ -15,7 +16,6 @@ const programScholarship = pgTable(
       .notNull()
       .references(() => scholarship.id),
     capacityFlg: integer().notNull(),
-    deleteFlg: integer().notNull(),
   },
   /* eslint-enable perfectionist/sort-objects */
   (table) => [unique().on(table.programId, table.scholarshipId)],

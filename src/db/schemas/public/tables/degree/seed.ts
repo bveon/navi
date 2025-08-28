@@ -7,7 +7,7 @@ import { Seed } from '../../../../utils/seed';
 
 import { degree as t } from '.';
 
-class CourseSeed extends Seed<typeof t, typeof t.$inferSelect> {
+class DegreeSeed extends Seed<typeof t, typeof t.$inferSelect> {
   protected async transform(
     row: Record<keyof typeof t.$inferSelect, string>,
   ): Promise<typeof t.$inferSelect> {
@@ -16,12 +16,14 @@ class CourseSeed extends Seed<typeof t, typeof t.$inferSelect> {
         ...row,
         awardId: stringToNumber(row.awardId),
         concentration: stringToStringOrNull(row.concentration),
-        cricosCode: stringToStringOrNull(row.cricosCode),
+        cricos: stringToStringOrNull(row.cricos),
+        deleteFlg: stringToNumber(row.deleteFlg),
         durationPg: stringToNumber(row.durationPg),
         durationUg: stringToNumber(row.durationUg),
+        endDate: stringToStringOrNull(row.endDate),
         entryOther: stringToStringOrNull(row.entryOther),
         entryOtherJpn: stringToStringOrNull(row.entryOtherJpn),
-        honors: stringToBoolean(row.honors),
+        hons: stringToBoolean(row.hons),
         id: stringToNumber(row.id),
         majorId: stringToNumber(row.majorId),
         universityId: stringToNumber(row.universityId),
@@ -30,6 +32,6 @@ class CourseSeed extends Seed<typeof t, typeof t.$inferSelect> {
   }
 }
 
-const course = new CourseSeed(t);
+const degree = new DegreeSeed(t);
 
-export { course };
+export { degree };
