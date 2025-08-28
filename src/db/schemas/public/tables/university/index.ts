@@ -18,7 +18,7 @@ const university = pgTable(
   {
     deleteFlg: integer().notNull(),
     id: integer().primaryKey(),
-    uapplyId: integer(),
+    uApplyId: integer(),
     name: text().notNull(),
     japaneseName: text().notNull(),
     abbr3: varchar({ length: 3 }).notNull().unique(),

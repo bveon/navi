@@ -26,7 +26,7 @@ class UniversitySeed extends Seed<typeof t, typeof t.$inferSelect> {
         ),
         score: stringToNumber(row.score),
         students: stringToNumber(row.students),
-        uapplyId: stringToNumberOrNull(row.uapplyId),
+        uApplyId: stringToNumberOrNull(row.uApplyId),
       });
     });
   }
