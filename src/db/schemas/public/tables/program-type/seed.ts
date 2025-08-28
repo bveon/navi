@@ -1,13 +1,10 @@
-import {
-  stringToNumber,
-  stringToNumberOrNull,
-} from '../../../../utils/coercion';
+import { stringToNumber } from '../../../../utils/coercion';
 import { Seed } from '../../../../utils/seed';
 import { timestampsDefaultValues } from '../../../../utils/timestamps';
 
-import { programType as t } from '.';
+import { programTypeInstance as t } from '.';
 
-class ProgramTypeSeed extends Seed<typeof t, typeof t.$inferSelect> {
+class ProgramTypeInstanceSeed extends Seed<typeof t, typeof t.$inferSelect> {
   protected async transform(
     row: Record<keyof typeof t.$inferSelect, string>,
   ): Promise<typeof t.$inferSelect> {
@@ -15,13 +12,14 @@ class ProgramTypeSeed extends Seed<typeof t, typeof t.$inferSelect> {
       resolve({
         ...row,
         ...timestampsDefaultValues,
-        tidDescription: stringToNumberOrNull(row.tidDescription),
-        tidName: stringToNumber(row.tidName),
+        courseOffset: stringToNumber(row.courseOffset),
+        duration: stringToNumber(row.duration),
+        id: stringToNumber(row.id),
       });
     });
   }
 }
 
-const programType = new ProgramTypeSeed(t);
+const programTypeInstance = new ProgramTypeInstanceSeed(t);
 
-export { programType };
+export { programTypeInstance };

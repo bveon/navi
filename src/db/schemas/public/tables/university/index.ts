@@ -1,5 +1,7 @@
+import { sql } from 'drizzle-orm';
 import {
-  boolean,
+  check,
+  date,
   integer,
   numeric,
   pgTable,
@@ -8,34 +10,43 @@ import {
   type AnyPgColumn,
 } from 'drizzle-orm/pg-core';
 
-import { timestamps } from '../../../../utils/timestamps';
-import { city } from '../city';
+import { country } from '../country';
 
 const university = pgTable(
   'university',
   /* eslint-disable perfectionist/sort-objects */
   {
     id: integer().primaryKey(),
-    primaryUniversityId: integer()
-      .notNull()
-      .references((): AnyPgColumn => university.id),
+    uapplyId: integer(),
+    name: text().notNull(),
+    japaneseName: text().notNull(),
     code: varchar({ length: 3 }).notNull().unique(),
     slug: text().notNull().unique(),
-    cityId: integer()
+    countryCode: varchar({ length: 2 })
       .notNull()
-      .references(() => city.id),
+      .references(() => country.code),
+    mainUniversityId: integer()
+      .notNull()
+      .references((): AnyPgColumn => university.id),
+    nonApplicableCountryCode: varchar({ length: 2 }).references(
+      () => country.code,
+    ),
+    startDate: date({ mode: 'string' }).notNull(),
+    endDate: date({ mode: 'string' }),
+    score: integer().notNull(),
+    imgVersion: integer().notNull(),
     latitude: numeric({ precision: 19, scale: 16 }).notNull(),
     longitude: numeric({ precision: 19, scale: 16 }).notNull(),
     foundingYear: integer().notNull(),
+    management: text().notNull(),
     students: integer().notNull(),
     internationalStudents: integer().notNull(),
+    ksp: text().notNull(),
     url: text().notNull(),
-    isActive: boolean().notNull(),
-    tidName: integer().notNull(),
-    tidDescription: integer(),
-    ...timestamps,
+    deleteFlg: integer().notNull(),
   },
   /* eslint-enable perfectionist/sort-objects */
+  (table) => [check('check_score', sql`${table.score} BETWEEN 0 AND 100`)],
 ).enableRLS();
 
 export { university };

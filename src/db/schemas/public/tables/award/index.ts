@@ -1,15 +1,16 @@
 import { integer, pgTable, text } from 'drizzle-orm/pg-core';
 
-const programType = pgTable(
-  'program_type',
+const award = pgTable(
+  'award',
   /* eslint-disable perfectionist/sort-objects */
   {
     id: integer().primaryKey(),
-    programType: text().notNull(),
-    duration: integer().notNull(),
-    courseOffset: integer().notNull(),
+    name: text().notNull().unique(),
+    award: text().notNull(),
+    ksp: text().notNull(),
+    deleteFlg: integer().notNull(),
   },
   /* eslint-enable perfectionist/sort-objects */
 ).enableRLS();
 
-export { programType };
+export { award };

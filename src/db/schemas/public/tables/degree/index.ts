@@ -1,18 +1,51 @@
-import { integer, pgTable, text } from 'drizzle-orm/pg-core';
+import {
+  boolean,
+  date,
+  integer,
+  pgTable,
+  text,
+  unique,
+} from 'drizzle-orm/pg-core';
 
-import { timestamps } from '../../../../utils/timestamps';
+import { award } from '../award';
+import { major } from '../major';
+import { university } from '../university';
 
 const degree = pgTable(
   'degree',
   /* eslint-disable perfectionist/sort-objects */
   {
     id: integer().primaryKey(),
-    name: text().notNull().unique(),
-    abbreviation: text().notNull(),
-    tidDescription: integer(),
-    ...timestamps,
+    universityId: integer()
+      .notNull()
+      .references(() => university.id),
+    awardId: integer()
+      .notNull()
+      .references(() => award.id),
+    majorId: integer()
+      .notNull()
+      .references(() => major.id),
+    concentration: text(),
+    honors: boolean().notNull(),
+    durationUg: integer().notNull(),
+    durationPg: integer().notNull(),
+    cricosCode: text(),
+    intakes: text().notNull(),
+    startDate: date({ mode: 'string' }).notNull(),
+    endDate: date({ mode: 'string' }),
+    entryOther: text(),
+    entryOtherJpn: text(),
   },
   /* eslint-enable perfectionist/sort-objects */
+  (table) => [
+    unique().on(
+      table.universityId,
+      table.awardId,
+      table.majorId,
+      table.concentration,
+      table.honors,
+    ),
+  ],
 ).enableRLS();
 
 export { degree };

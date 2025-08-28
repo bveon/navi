@@ -1,9 +1,9 @@
 import { stringToNumber } from '../../../../utils/coercion';
 import { Seed } from '../../../../utils/seed';
 
-import { designation as t } from '.';
+import { universityDesignation as t } from '.';
 
-class DesignationSeed extends Seed<typeof t, typeof t.$inferSelect> {
+class UniversityDesignationSeed extends Seed<typeof t, typeof t.$inferSelect> {
   protected async transform(
     row: Record<keyof typeof t.$inferSelect, string>,
   ): Promise<typeof t.$inferSelect> {
@@ -11,12 +11,14 @@ class DesignationSeed extends Seed<typeof t, typeof t.$inferSelect> {
       resolve({
         ...row,
         deleteFlg: stringToNumber(row.deleteFlg),
+        designationId: stringToNumber(row.designationId),
         id: stringToNumber(row.id),
+        universityId: stringToNumber(row.universityId),
       });
     });
   }
 }
 
-const designation = new DesignationSeed(t);
+const universityDesignation = new UniversityDesignationSeed(t);
 
-export { designation };
+export { universityDesignation };

@@ -1,17 +1,18 @@
-import { integer, pgTable } from 'drizzle-orm/pg-core';
+import { integer, pgTable, text } from 'drizzle-orm/pg-core';
 
-import { timestamps } from '../../../../utils/timestamps';
-
-const universityDesignation = pgTable(
-  'university_designation',
+const designation = pgTable(
+  'designation',
   /* eslint-disable perfectionist/sort-objects */
   {
     id: integer().primaryKey(),
-    tidName: integer().notNull(),
-    tidDescription: integer(),
-    ...timestamps,
+    name: text().notNull(),
+    japaneseName: text().notNull(),
+    iconUrl: text().notNull(),
+    description: text().notNull(),
+    aCode: text().notNull().unique(),
+    deleteFlg: integer().notNull(),
   },
   /* eslint-enable perfectionist/sort-objects */
 ).enableRLS();
 
-export { universityDesignation };
+export { designation };

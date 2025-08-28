@@ -1,0 +1,161 @@
+﻿id,name,abbreviation,tid_description
+1,Bachelor of Advanced Computer Science,BAdvCompSci,1
+2,Bachelor of Agribusiness,BAgribusiness,2
+3,Bachelor of Agricultural Sciences,BAgrSci,3
+4,Bachelor of Arts,BA,4
+5,Bachelor of Biological Sciences,BBiolSci,5
+6,Bachelor of Biomedical Sciences,BBiomedSci,6
+7,Bachelor of Business,BBus,7
+8,Bachelor of Commerce,BComm,8
+9,Bachelor of Earth Sciences,BEarthSci,9
+10,Bachelor of Economics,BEcon,10
+11,Bachelor of Engineering,BEng,11
+12,Bachelor of Environmental Design,BEnvDes,12
+13,Bachelor of Environmental Sciences,BEnvSci,13
+14,Bachelor of Human Sciences,BHumSci,14
+15,Bachelor of Marine Sciences,BMarSci,15
+16,Bachelor of Molecular Sciences,BMolSci,16
+17,Bachelor of Philosophy,BPhil,17
+18,Bachelor of Psychology,BPsych,18
+19,Bachelor of Science,BSc,19
+20,Bachelor of Laws,LLB,20
+21,Master of Engineering,MEng,21
+22,Master of Science,MSc,22
+23,Master of Biomedical Sciences,MBiomedSci,23
+24,Master of Chemistry,MChem,24
+25,Master of Mathematics,MMath,25
+26,Master of Mathematics and Statistics,MMathStat,26
+27,Master of Pharmacy,MPharm,27
+28,Master of Physics,MPhys,28
+29,Master of Planning,MPlan,29
+30,Bachelor of Nursing,BNurs,30
+31,Bachelor of Social Sciences,BSocSci,31
+32,Master of Earth Sciences,MEarthSci,32
+33,Master of Environmental Sciences,MEnvSci,33
+34,Master of Mathematics and Physics,MMathPhys,34
+35,Master of Planning with Real Estate,MPRE,35
+36,Master of Computing,MComp,36
+37,Bachelor of Business and Law,BBL,37
+38,Master of Arabic,MArabic,38
+39,Bachelor of Accountancy,BAcc,39
+40,Bachelor of Fine Arts,BFA,40
+41,Bachelor of Music,BMus,41
+42,Bachelor of Social Work,BSW,42
+43,Bachelor of Business Administration,BBA,43
+44,Bachelor of Music Education,BME,44
+45,Master of Professional Accounting,MPA,45
+46,Bachelor of General Studies,BGS,46
+47,Bachelor of Applied Data Analytics,BAppDataAnalytics,47
+48,Bachelor of Architectural Design,BArchDesign,48
+49,Bachelor of Biotechnology,BBiotech,49
+50,Bachelor of Computer Science,BCompSci,50
+51,Bachelor of Construction Management,BConstMan,51
+52,Bachelor of Criminology,BCrim,52
+53,Bachelor of Environmental Policy and Management,BEnvPolMan,53
+54,Bachelor of Finance and Banking,BFinBank,54
+55,Bachelor of Food and Nutrition Science,BFNSc,55
+56,Bachelor of Health and Medical Sciences,BHlthMSc,56
+57,Bachelor of Information Technology,BInfTech,57
+58,Bachelor of International Development,BDevStud,58
+59,Bachelor of International Relations,BIntlRel,59
+60,Bachelor of Languages,BLang,60
+61,Bachelor of Marine and Wildlife Conservation,BMWCons,61
+62,Bachelor of Mathematical and Computer Sciences,BMScCSc,62
+63,Bachelor of Mathematical Sciences,BMathSci,63
+64,Bachelor of Media,BMedia,64
+65,"Bachelor of Philosophy, Politics and Economics",BPPE,65
+66,Bachelor of Project Management,BProjMgt,66
+67,Bachelor of Psychological Science,BPsych,67
+68,Bachelor of Sociology,BSoc,68
+69,Bachelor of Veterinary Technology,BVetTech,69
+70,Bachelor of Viticulture and Oenology,BVitOen,70
+71,Master of Arts,MA,71
+72,Master of Arts (Scotland),MA,72
+73,Master of Biological Sciences,MBiolSci,73
+74,Master of Ocean Sciences,MOSci,74
+75,Bachelor of Architecture,BArch,75
+76,Master of Nutrition,MNutr,76
+77,Master of Biochemistry,MBiochem,77
+78,Bachelor of Architecture and Environments,BArchEnv,78
+79,Bachelor of Design,BDes,79
+80,Bachelor of Education,BEd,80
+81,Bachelor of Liberal Arts and Science,BLibArtsSci,81
+82,Bachelor of Visual Arts,BVisArts,82
+83,Bachelor of Advanced Computing,BAdvComp,83
+84,Bachelor of Applied Science,BAS,84
+85,Bachelor of Environment,BEnv,85
+86,Bachelor of Environmental Studies,BEnvSci,86
+87,Bachelor of Recreation Management and Community Development ,BRMCD,87
+88,Bachelor of Environmental Science,BEnvSci,88
+89,Bachelor of Accounting,BAcc,89
+90,Bachelor of Health Services Administration,BHSA,90
+91,Bachelor of Public Policy and Service,BPPS,91
+92,Bachelor of Medical Sciences,BMedSci,92
+93,Master of Psychology,MPsyc,93
+94,Master of Natural Sciences,MNatSci,94
+95,Master of Neuroscience,MNeuro,95
+96,Master of Optometry,MOptom,96
+97,Bachelor of Civil Law,BCL,97
+98,Bachelor of Advanced Science,BAdvSci,98
+99,Bachelor of Architectural Studies,BAS,99
+100,Bachelor of Communication,BC,100
+101,Bachelor of Dance Studies,BDanceSt,101
+102,Bachelor of Global Studies,BGlobalSt,102
+103,Bachelor of Health Sciences,BHSci,103
+104,Bachelor of Property,BProp,104
+105,"Bachelor of Sport, Health and Physical Education",BSportHPE,105
+106,Bachelor of Urban Planning,BUrbPlan,106
+107,Master of Languages,MLang,107
+108,Bachelor of Accounting and Finance,BAccFin,108
+109,Bachelor of Banking and Finance,BBankFin,109
+110,Bachelor of Civil Engineering,BCivilEng,110
+111,Bachelor of Information and Communication Technology,BInfComm,111
+112,Bachelor of Mass Communications,BMassComm,112
+113,Bachelor of Mechanical Engineering,BMechEng,113
+114,Bachelor of Media and Communication,BMediaComm,114
+115,Bachelor of Medicine Bachelor of Surgery,BMBS,115
+116,Bachelor of Science in Economics,BSc (Econ),116
+117,Bachelor of Arts in Education,BAE,117
+118,Bachelor of Science in Nursing,BSN,118
+119,Bachelor of Art History and Curatorial Studies,BAHCS,119
+120,Bachelor of Criminology and Criminal Justice,BCCJ,120
+121,Bachelor of Geographical and Spatial Science,BGSC,121
+122,Bachelor of Human Rights,BHR,122
+123,Bachelor of Modern Languages,BML,123
+124,Bachelor of Social and Environmental Sustainability,BSES,124
+125,Bachelor of Sport and Exercise Science,BSES,125
+126,Bachelor of Midwifery,BMid,126
+127,Bachelor of Aviation,BAv,127
+128,Bachelor of Biomedical and Health Sciences,BBHS,128
+129,Bachelor of Clinical Exercise Physiology,BCEP,129
+130,Bachelor of Creative Arts,BCA,130
+131,Bachelor of Cybersecurity,BC,131
+132,Bachelor of Dental Surgery,BDS,132
+133,Bachelor of Exercise and Sport Science,BESS,133
+134,Bachelor of Film and Television,BFT,134
+135,Bachelor of Graphic Communication Design,BGCD,135
+136,Bachelor of Human Movement,BHM,136
+137,Bachelor of Human Nutrition,BHN,137
+138,Bachelor of Illustration and Animation,BIA,138
+139,Bachelor of Industrial Design,BID,139
+140,Bachelor of Interior Architecture,BIA,140
+141,Bachelor of Journalism,BJ,141
+142,Bachelor of Laboratory Medicine,BLM,142
+143,Bachelor of Mathematics,BM,143
+144,Bachelor of Medical Radiation Science,BMRS,144
+145,Bachelor of Medical Studies,BMS,145
+146,Bachelor of Music Theatre,BMT,146
+147,Bachelor of Occupational Therapy,BOT,147
+148,Bachelor of Oral Health,BOH,148
+149,Bachelor of Outdoor and Environmental Leadership,BOEL,149
+150,Bachelor of Pharmaceutical Science,BPS,150
+151,Bachelor of Pharmacy,BP,151
+152,Bachelor of Physiotherapy,BP,152
+153,Bachelor of Podiatry,BP,153
+154,Bachelor of Public Health,BPH,154
+155,Bachelor of Social Science,BSS,155
+156,Bachelor of Software Engineering,BSEng,156
+157,Bachelor of Speech Pathology,BSP,157
+158,Bachelor of Sustainability and Climate Change,BSCC,158
+159,Bachelor of Teaching,BT,159
+160,Bachelor of Visual Effects,BVE,160

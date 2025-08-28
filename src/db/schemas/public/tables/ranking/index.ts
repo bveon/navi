@@ -1,15 +1,5 @@
-import {
-  boolean,
-  integer,
-  pgTable,
-  text,
-  unique,
-  varchar,
-} from 'drizzle-orm/pg-core';
+import { integer, pgTable, text, unique } from 'drizzle-orm/pg-core';
 
-import { timestamps } from '../../../../utils/timestamps';
-import { rankingScopeEnum } from '../../enums';
-import { rankingBody } from '../ranking-body';
 import { university } from '../university';
 
 const ranking = pgTable(
@@ -20,27 +10,13 @@ const ranking = pgTable(
     universityId: integer()
       .notNull()
       .references(() => university.id),
-    rankingBodyCode: varchar({ length: 20 })
-      .notNull()
-      .references(() => rankingBody.code),
-    scope: rankingScopeEnum().notNull(),
-    field: text(),
+    name: text().notNull(),
     year: integer().notNull(),
-    min: integer().notNull(),
-    max: integer().notNull().default(0),
-    isActive: boolean().notNull().default(false),
-    ...timestamps,
+    ranking: text().notNull(),
+    deleteFlg: integer().notNull(),
   },
   /* eslint-enable perfectionist/sort-objects */
-  (table) => [
-    unique().on(
-      table.universityId,
-      table.rankingBodyCode,
-      table.scope,
-      table.field,
-      table.year,
-    ),
-  ],
+  (table) => [unique().on(table.universityId, table.name, table.year)],
 ).enableRLS();
 
 export { ranking };

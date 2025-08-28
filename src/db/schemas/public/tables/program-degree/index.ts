@@ -1,24 +1,23 @@
 import { integer, pgTable, unique } from 'drizzle-orm/pg-core';
 
+import { degree } from '../degree';
 import { program } from '../program';
-import { scholarship } from '../scholarship';
 
-const programScholarship = pgTable(
-  'program_scholarship',
+const programDegree = pgTable(
+  'program_degree',
   /* eslint-disable perfectionist/sort-objects */
   {
     id: integer().primaryKey(),
     programId: integer()
       .notNull()
       .references(() => program.id),
-    scholarshipId: integer()
+    degreeId: integer()
       .notNull()
-      .references(() => scholarship.id),
-    capacityFlg: integer().notNull(),
+      .references(() => degree.id),
     deleteFlg: integer().notNull(),
   },
   /* eslint-enable perfectionist/sort-objects */
-  (table) => [unique().on(table.programId, table.scholarshipId)],
+  (table) => [unique().on(table.programId, table.degreeId)],
 ).enableRLS();
 
-export { programScholarship };
+export { programDegree };

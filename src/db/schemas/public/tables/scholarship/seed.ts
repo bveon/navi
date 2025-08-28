@@ -1,12 +1,8 @@
 import {
-  stringToBoolean,
-  stringToEnum,
   stringToNumber,
-  stringToNumberOrNull,
+  stringToStringOrNull,
 } from '../../../../utils/coercion';
 import { Seed } from '../../../../utils/seed';
-import { timestampsDefaultValues } from '../../../../utils/timestamps';
-import { durationUnitEnum, scholarshipTypeEnum } from '../../enums';
 
 import { scholarship as t } from '.';
 
@@ -17,22 +13,11 @@ class ScholarshipSeed extends Seed<typeof t, typeof t.$inferSelect> {
     return new Promise((resolve) => {
       resolve({
         ...row,
-        ...timestampsDefaultValues,
-        duration: stringToNumber(row.duration),
-        durationUnit: stringToEnum(
-          row.durationUnit,
-          durationUnitEnum.enumValues,
-        ),
-        hasCapacity: stringToBoolean(row.hasCapacity),
+        deleteFlg: stringToNumber(row.deleteFlg),
         id: stringToNumber(row.id),
-        isActive: stringToBoolean(row.isActive),
-        isCapacity: stringToBoolean(row.isCapacity),
-        max: stringToNumber(row.max),
-        min: stringToNumberOrNull(row.min),
-        tidDescription: stringToNumberOrNull(row.tidDescription),
-        tidName: stringToNumber(row.tidName),
-        tidRequirements: stringToNumberOrNull(row.tidRequirements),
-        type: stringToEnum(row.type, scholarshipTypeEnum.enumValues),
+        scholarship: stringToNumber(row.scholarship),
+        scholarshipKsp: stringToStringOrNull(row.scholarshipKsp),
+        scholarshipKspEn: stringToStringOrNull(row.scholarshipKspEn),
       });
     });
   }

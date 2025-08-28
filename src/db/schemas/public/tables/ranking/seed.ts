@@ -1,11 +1,5 @@
-import {
-  stringToBoolean,
-  stringToEnum,
-  stringToNumber,
-} from '../../../../utils/coercion';
+import { stringToNumber } from '../../../../utils/coercion';
 import { Seed } from '../../../../utils/seed';
-import { timestampsDefaultValues } from '../../../../utils/timestamps';
-import { rankingScopeEnum } from '../../enums';
 
 import { ranking as t } from '.';
 
@@ -16,12 +10,8 @@ class RankingSeed extends Seed<typeof t, typeof t.$inferSelect> {
     return new Promise((resolve) => {
       resolve({
         ...row,
-        ...timestampsDefaultValues,
+        deleteFlg: stringToNumber(row.deleteFlg),
         id: stringToNumber(row.id),
-        isActive: stringToBoolean(row.isActive),
-        max: stringToNumber(row.max),
-        min: stringToNumber(row.min),
-        scope: stringToEnum(row.scope, rankingScopeEnum.enumValues),
         universityId: stringToNumber(row.universityId),
         year: stringToNumber(row.year),
       });

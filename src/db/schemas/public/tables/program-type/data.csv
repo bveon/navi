@@ -1,5 +1,9 @@
-﻿code,abbreviation,tid_name,tid_description
-dip,diploma,2,
-fdn,foundation,1,
-ugd,ug direct,4,
-ugp,ug pathway,3,
+﻿id,program_type_code,duration,course_offset
+1,fdn,1,0
+2,dip,1,1
+3,ugp,1,1
+4,ugd,0,0
+5,fdn,1,1
+6,dip,1,2
+7,ugp,2,2
+8,dip,2,2

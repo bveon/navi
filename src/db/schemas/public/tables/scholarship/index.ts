@@ -1,27 +1,18 @@
-import { boolean, date, integer, pgTable } from 'drizzle-orm/pg-core';
-
-import { timestamps } from '../../../../utils/timestamps';
-import { durationUnitEnum, scholarshipTypeEnum } from '../../enums';
+import { date, integer, pgTable, text } from 'drizzle-orm/pg-core';
 
 const scholarship = pgTable(
   'scholarship',
   /* eslint-disable perfectionist/sort-objects */
   {
     id: integer().primaryKey(),
-    startDate: date({ mode: 'string' }).notNull(),
-    endDate: date({ mode: 'string' }).notNull(),
-    min: integer(),
-    max: integer().notNull(),
-    duration: integer().notNull(),
-    durationUnit: durationUnitEnum().notNull(),
-    type: scholarshipTypeEnum().notNull(),
-    hasCapacity: boolean().notNull(),
-    isCapacity: boolean().notNull(),
-    isActive: boolean().notNull(),
-    tidName: integer().notNull(),
-    tidRequirements: integer(),
-    tidDescription: integer(),
-    ...timestamps,
+    name: text().notNull(),
+    scholarship: integer().notNull(),
+    scholarshipKspEn: text(),
+    scholarshipKsp: text(),
+    scholarshipType: text().notNull(),
+    displayStart: date({ mode: 'string' }),
+    displayEnd: date({ mode: 'string' }),
+    deleteFlg: integer().notNull(),
   },
   /* eslint-enable perfectionist/sort-objects */
 ).enableRLS();
