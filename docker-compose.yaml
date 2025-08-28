@@ -1,0 +1,44 @@
+services:
+  db:
+    container_name: db
+    image: postgres:17.5-bookworm
+    env_file:
+      - .env
+    ports:
+      - name: postgres
+        target: 5432
+        published: 5432
+    volumes:
+      - type: volume
+        source: postgres
+        target: /var/lib/postgresql/data
+    networks:
+      - postgres
+
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4:9.3
+    env_file:
+      - .env
+    ports:
+      - name: pgadmin
+        target: 80
+        published: 5050
+    volumes:
+      - type: volume
+        source: pgadmin
+        target: /var/lib/pgadmin
+    networks:
+      - postgres
+
+volumes:
+  postgres:
+    external: true
+    name: postgres
+  pgadmin:
+    external: true
+    name: pgadmin
+
+networks:
+  postgres:
+    name: postgres

@@ -1,0 +1,162 @@
+﻿id,language_iso639_code,translation
+1,en,national
+2,en,England
+2,ja,イングランド
+2,vi,Anh
+3,en,Scotland
+3,ja,スコットランド
+4,en,Wales
+4,ja,ウェールズ
+5,en,Northern Ireland
+5,ja,北アイルランド
+5,vi,Bắc Ireland
+6,en,Alabama
+6,ja,アラバマ州
+7,en,Alaska
+7,ja,アラスカ州
+8,en,Arizona
+8,ja,アリゾナ州
+9,en,Arkansas
+9,ja,アーカンソー州
+10,en,California
+10,ja,カリフォルニア州
+11,en,Colorado
+11,ja,コロラド州
+12,en,Connecticut
+12,ja,コネチカット州
+13,en,Delaware
+13,ja,デラウェア州
+14,en,Florida
+14,ja,フロリダ州
+15,en,Georgia
+15,ja,ジョージア州
+16,en,Hawaii
+16,ja,ハワイ州
+17,en,Idaho
+17,ja,アイダホ州
+18,en,Illinois
+18,ja,イリノイ州
+19,en,Indiana
+19,ja,インディアナ州
+20,en,Iowa
+20,ja,アイオワ州
+21,en,Kansas
+21,ja,カンザス州
+22,en,Kentucky
+22,ja,ケンタッキー州
+23,en,Louisiana
+23,ja,ルイジアナ州
+24,en,Maine
+24,ja,メイン州
+25,en,Maryland
+25,ja,メリーランド州
+26,en,Massachusetts
+26,ja,マサチューセッツ州
+27,en,Michigan
+27,ja,ミシガン州
+28,en,Minnesota
+28,ja,ミネソタ州
+29,en,Mississippi
+29,ja,ミシシッピ州
+30,en,Missouri
+30,ja,ミズーリ州
+31,en,Montana
+31,ja,モンタナ州
+32,en,Nebraska
+32,ja,ネブラスカ州
+33,en,Nevada
+33,ja,ネバダ州
+34,en,New Hampshire
+34,ja,ニューハンプシャー州
+35,en,New Jersey
+35,ja,ニュージャージー州
+36,en,New Mexico
+36,ja,ニューメキシコ州
+37,en,New York
+37,ja,ニューヨーク州
+38,en,North Carolina
+38,ja,ノースカロライナ州
+39,en,North Dakota
+39,ja,ノースダコタ州
+40,en,Ohio
+40,ja,オハイオ州
+41,en,Oklahoma
+41,ja,オクラホマ州
+42,en,Oregon
+42,ja,オレゴン州
+43,en,Pennsylvania
+43,ja,ペンシルベニア州
+44,en,Rhode Island
+44,ja,ロードアイランド州
+45,en,South Carolina
+45,ja,サウスカロライナ州
+46,en,South Dakota
+46,ja,サウスダコタ州
+47,en,Tennessee
+47,ja,テネシー州
+48,en,Texas
+48,ja,テキサス州
+49,en,Utah
+49,ja,ユタ州
+50,en,Vermont
+50,ja,バーモント州
+51,en,Virginia
+51,ja,バージニア州
+52,en,Washington
+52,ja,ワシントン州
+53,en,West Virginia
+53,ja,ウェストバージニア州
+53,vi,Tây Virginia
+54,en,Wisconsin
+54,ja,ウィスコンシン州
+55,en,Wyoming
+55,ja,ワイオミング州
+56,en,New South Wales
+56,ja,ニューサウスウェールズ州
+57,en,Victoria
+57,ja,ビクトリア州
+58,en,Queensland
+58,ja,クイーンズランド州
+59,en,Western Australia
+59,ja,西オーストラリア州
+60,en,South Australia
+60,ja,南オーストラリア州
+61,en,Tasmania
+61,ja,タスマニア州
+62,en,Northern Territory
+62,ja,ノーザンテリトリー
+63,en,Australian Capital Territory
+63,ja,オーストラリア首都特別地域
+64,en,Alberta
+64,ja,アルバータ州
+65,en,British Columbia
+65,ja,ブリティッシュコロンビア州
+66,en,Manitoba
+66,ja,マニトバ州
+67,en,New Brunswick
+67,ja,ニューブランズウィック州
+68,en,Newfoundland and Labrador
+68,ja,ニューファンドランド・ラブラドール州
+68,vi,Newfoundland và Labrador
+69,en,Northwest Territories
+69,ja,ノースウェスト準州
+70,en,Nova Scotia
+70,ja,ノバスコシア州
+71,en,Nunavut
+71,ja,ヌナブト準州
+72,en,Ontario
+72,ja,オンタリオ州
+73,en,Prince Edward Island
+73,ja,プリンスエドワードアイランド州
+74,en,Quebec
+74,ja,ケベック州
+75,en,Saskatchewan
+75,ja,サスカチュワン州
+76,en,Yukon
+76,ja,ユーコン準州
+77,en,Penninsular Malaysia
+77,ja,マレーシア半島
+77,vi,Malaysia bán đảo
+78,en,East Malaysia
+78,ja,東マレーシア
+78,vi,Malaysia Đông

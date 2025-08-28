@@ -1,0 +1,15 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+
+  "cSpell.ignorePaths": [
+    "**/.turbo/**",
+    "**/migrations/**",
+    "**/node_modules/**",
+    "pnpm-lock.yaml"
+  ],
+
+  "prettier.configPath": ".prettierrc.cjs",
+  "prettier.prettierPath": "node_modules/prettier",
+  "prettier.requireConfig": true,
+  "prettier.useEditorConfig": true
+}

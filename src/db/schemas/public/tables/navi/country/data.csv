@@ -1,0 +1,10 @@
+﻿country_iso3166_code,currency_iso4217_code,sort
+au,aud,3
+ca,cad,6
+de,eur,9
+gb,gbp,1
+ie,eur,7
+my,myr,4
+nl,eur,8
+nz,nzd,5
+us,usd,2

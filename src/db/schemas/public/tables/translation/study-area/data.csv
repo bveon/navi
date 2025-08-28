@@ -1,0 +1,40 @@
+﻿id,language_iso639_code,translation
+1,en,Science
+1,ja,理学・サイエンス系
+1,vi,Khoa học
+2,en,Computing and IT
+2,ja,テクノロジー系
+2,vi,Tin học và CNTT
+3,en,Engineering
+3,ja,工学・エンジニアリング系
+3,vi,Kỹ thuật
+4,en,Mathematics
+4,ja,数学
+4,vi,Toán học
+5,en,"Medicine, Pharmacy, Nursing and Life Sciences"
+5,ja,医療・薬学・看護・生命科学
+5,vi,"Y học, Dược, Điều dưỡng và Khoa học đời sống"
+6,en,"Agriculture, Veterinary, Animal Science and Fisheries"
+6,ja,農・獣医畜産・水産学
+6,vi,"Nông nghiệp, Thú y, Khoa học động vật và Thủy sản"
+7,en,"Economics, Business and Accounting"
+7,ja,経済・経営・会計学系
+7,vi,"Kinh tế, Kinh doanh và Kế toán"
+8,en,"Law, Politics and Policy"
+8,ja,法・政治・政策系
+8,vi,"Luật, Chính trị và Chính sách"
+9,en,International Relations and Development Studies
+9,ja,国際関係・開発学系
+9,vi,Quan hệ quốc tế và Nghiên cứu phát triển
+10,en,Architecture and Environmental Studies
+10,ja,建築・環境学系
+10,vi,Kiến trúc và Nghiên cứu môi trường
+11,en,Humanities
+11,ja,人文学系
+11,vi,Nhân văn
+12,en,Social Science and Media Studies
+12,ja,社会学・メディア学系
+12,vi,Khoa học xã hội và Nghiên cứu truyền thông
+13,en,Art
+13,ja,芸術学系
+13,vi,Nghệ thuật

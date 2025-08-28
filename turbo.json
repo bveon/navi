@@ -1,0 +1,17 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "tasks": {
+    "check-format": {
+      "outputs": ["node_modules/.cache/prettier"]
+    },
+    "check-types": {
+      "outputs": ["node_modules/.cache/tsbuildinfo"]
+    },
+    "format": {
+      "outputs": ["node_modules/.cache/prettier"]
+    },
+    "lint": {
+      "outputs": ["node_modules/.cache/eslint"]
+    }
+  }
+}

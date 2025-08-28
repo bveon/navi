@@ -1,0 +1,8 @@
+# drizzle
+**/db/migrations/
+
+# turborepo
+.turbo/
+
+# node.js
+pnpm-lock.yaml

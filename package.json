@@ -1,0 +1,62 @@
+{
+  "name": "navi",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check-format": "prettier . --check --cache --cache-location 'node_modules/.cache/prettier'",
+    "check-types": "tsc --noEmit",
+    "ci": "turbo run check-format check-types lint",
+    "clean": "rm -rf node_modules",
+    "postclean": "pnpm install",
+    "clear-cache": "rm -rf node_modules/.cache",
+    "db:down": "docker-compose down",
+    "db:drop": "DB_DROP=true tsx scripts/drop-db.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "DB_MIGRATE=true tsx scripts/migrate-db.ts && pnpm run db:push",
+    "db:push": "DB_PUSH=true tsx scripts/push-db.ts",
+    "db:rollback": "drizzle-kit drop",
+    "db:seed": "DB_SEED=true tsx scripts/seed-db.ts",
+    "db:sync": "drizzle-kit push && pnpm run db:push",
+    "db:up": "docker-compose up --detach",
+    "format": "prettier . --write --log-level warn --cache --cache-location 'node_modules/.cache/prettier'",
+    "lint": "eslint . --cache --cache-location 'node_modules/.cache/eslint' --max-warnings 0"
+  },
+  "dependencies": {
+    "dotenv": "16.5.0",
+    "drizzle-orm": "0.44.2",
+    "pg": "8.16.0",
+    "zod": "3.25.56"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "3.3.1",
+    "@eslint/js": "9.28.0",
+    "@types/node": "22.15.29",
+    "@types/pg": "8.15.4",
+    "@typescript-eslint/parser": "8.33.0",
+    "csv-parse": "5.6.0",
+    "drizzle-kit": "0.31.1",
+    "eslint": "9.28.0",
+    "eslint-config-prettier": "10.1.5",
+    "eslint-config-turbo": "2.5.4",
+    "eslint-import-resolver-typescript": "4.4.2",
+    "eslint-plugin-eslint-comments": "3.2.0",
+    "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-jsdoc": "50.7.1",
+    "eslint-plugin-n": "17.19.0",
+    "eslint-plugin-perfectionist": "4.13.0",
+    "eslint-plugin-unicorn": "59.0.1",
+    "eslint-plugin-unused-imports": "4.1.4",
+    "glob": "11.0.3",
+    "prettier": "3.5.3",
+    "prettier-plugin-packagejson": "2.5.15",
+    "tsx": "4.19.4",
+    "turbo": "2.5.4",
+    "typescript": "5.8.3",
+    "typescript-eslint": "8.33.0"
+  },
+  "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977",
+  "engines": {
+    "node": ">=22.18.0"
+  }
+}
