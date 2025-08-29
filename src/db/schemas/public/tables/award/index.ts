@@ -8,7 +8,7 @@ const award = pgTable(
     id: integer().primaryKey(),
     award: text().notNull(),
     ksp: text().notNull(),
-    aLongName: text().notNull().unique(),
+    aLongText: text().notNull().unique(),
   },
   /* eslint-enable perfectionist/sort-objects */
 ).enableRLS();

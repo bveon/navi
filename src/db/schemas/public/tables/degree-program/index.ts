@@ -9,12 +9,12 @@ const degreeProgram = pgTable(
   {
     deleteFlg: integer().notNull(),
     id: integer().primaryKey(),
-    programId: integer()
-      .notNull()
-      .references(() => program.id),
     degreeId: integer()
       .notNull()
       .references(() => degree.id),
+    programId: integer()
+      .notNull()
+      .references(() => program.id),
   },
   /* eslint-enable perfectionist/sort-objects */
   (table) => [unique().on(table.programId, table.degreeId)],

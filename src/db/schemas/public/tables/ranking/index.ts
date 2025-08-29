@@ -8,12 +8,12 @@ const ranking = pgTable(
   {
     deleteFlg: integer().notNull(),
     id: integer().primaryKey(),
-    universityId: integer()
-      .notNull()
-      .references(() => university.id),
     name: text().notNull(),
     year: integer().notNull(),
     ranking: text().notNull(),
+    universityId: integer()
+      .notNull()
+      .references(() => university.id),
     displayFlg: boolean().notNull(),
   },
   /* eslint-enable perfectionist/sort-objects */
